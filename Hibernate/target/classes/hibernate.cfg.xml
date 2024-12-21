@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <mapping class="com.practice.Hibernate.Student"/>
+        <mapping class="com.practice.Hibernate.Address"/>
+         <!--<mapping class="com.practice.Hibernate.Question"/>
+        <mapping class="com.practice.Hibernate.Answer"/>-->
+        <mapping class="com.practice.Hibernate.Employee"/>
+        <mapping class="com.practice.Hibernate.Project"/>
+    </session-factory>
+</hibernate-configuration>
